@@ -1,0 +1,402 @@
+/***********
+ * IMPORTS *
+ ***********/
+ 
+
+/* Logo Font */
+@import url("modules/logo_font.css");
+
+/* Font */
+@import url("modules/font.css");
+
+/* Material Icons */
+@import url("modules/material_icons.css");
+
+
+
+
+
+
+
+
+/***********
+ * GLOBALS *
+ ***********/
+:root {
+    --text-color: #312e2e;
+    --success-color: #0f766e;
+    --error-color: #B71C1C;
+    --light-text-color: #4e4949;
+
+
+    --header-height: 150px;
+    --mobile-header-height: 110px;
+}
+
+
+
+
+
+
+/*************
+ * SANITIZER *
+ *************/
+*, *::before, *::after { box-sizing: border-box; border:none; background-repeat: no-repeat; padding:0; margin: 0; }
+html {  word-break: break-word; scroll-behavior: smooth; color: var(--text-color)}
+img { max-width: 100%; }
+ul,ol { list-style: none;padding-left:0;}
+ul li, ol li { margin: 10px 0 10px 0; }
+ul li .md-icon, ol li .md-icon { vertical-align: middle;}
+.truncate { white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+
+
+
+
+
+
+
+/******************
+ * FILLED BUTTONS *
+ ******************/
+
+/* Filled Button */
+.filled-button {
+    background-color: #000000;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight:bold;
+}
+.filled-button:hover, .filled-button:active {
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************
+ * APP BODY *
+ ************/
+body {
+    font-family: "Montserrat", "Roboto", sans-serif;
+    background-color: #f7f1f1;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+/*****************
+ * APP CONTAINER *
+ *****************/
+#app_container {
+
+}
+
+
+
+
+
+
+
+
+
+
+/**********
+ * HEADER *
+ **********/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:25px 15px 15px 15px;
+    height: var(--header-height);
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+    position: relative;
+    z-index:3;
+}
+
+
+/* Logo */
+header .logo {
+    font-family: "Great Vibes", "Montserrat", "Roboto", sans-serif;
+    color:white;
+    font-size: 3.5rem;
+}
+
+
+/* Tabs */
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+header ul li {
+    margin: 0 10px 10px 10px;
+    padding: 15px 20px 15px 20px;
+    opacity: 0.5;
+}
+header ul li:hover {
+    background-color: #302d2d;
+    cursor: pointer;
+}
+header ul li.active {
+    border-bottom: 2px solid white;
+    opacity: 1;
+    cursor:default;
+    background-color: inherit;
+}
+header ul li.active:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/********
+ * HOME *
+ ********/
+#home {
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background-image: url(../assets/img/splash.jpg);
+    background-size: cover;
+}
+
+/* Splash */
+#home .splash {
+    padding:15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width:100%;
+    height: calc(100vh - var(--header-height));
+    position: absolute;
+    top:var(--header-height);
+    left:0;
+    z-index:2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+#home .splash p { text-align: center;}
+#home .splash p:nth-child(1) {
+    font-size: 2.2rem;
+    font-weight:500;
+}
+#home .splash p:nth-child(2) {
+    font-size: 4rem;
+    margin: 25px 0 25px 0;
+    font-weight:900;
+}
+#home .splash p:nth-child(3) {
+    font-size: 1.5rem;
+}
+
+
+/* Splash Actions */
+#home .splash .actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 70px;
+}
+
+
+#home .splash .actions button{
+    padding:20px;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+}
+#home .splash .actions #splash_reservation_button {
+    background-color: var(--error-color);
+}
+#home .splash .actions #splash_reservation_button:hover {
+    background-color: #000000;
+}
+#home .splash .actions #splash_menu_button {
+    border: 1px solid white;
+    background-color: transparent;
+}
+#home .splash .actions #splash_menu_button:hover {
+    border: 1px solid #000000;
+    background-color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************
+ * RESPONSIVE MEDIA QUERIES *
+ ****************************/
+
+
+
+/*
+ * DEVICE: Desktops
+ * SCREEN: 1281px to higher resolution desktops
+ */
+@media (min-width: 1281px) {
+
+
+
+}
+ 
+ 
+/*
+ * DEVICE: Laptops, Desktops
+ * SCREEN: B/w 1025px to 1280px
+ */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+
+
+}
+ 
+ 
+/*
+ * DEVICE: Tablets, Ipads (portrait)
+ * SCREEN: B/w 768px to 1024px
+ */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+}
+ 
+ 
+/*
+ * DEVICE: Tablets, Ipads (landscape)
+ * SCREEN: B/w 768px to 1024px
+ */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+}
+ 
+ 
+/*
+ * DEVICE: Low Resolution Tablets, Mobiles (Landscape)
+ * SCREEN: B/w 481px to 767px
+ */
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+}
+
+ 
+ 
+/*
+ * DEVICE: Most of the Smartphones Mobiles (Portrait)
+ * SCREEN: 480px to lower resolution mobiles
+ */
+@media (max-width: 480px) {
+    /**********
+    * HEADER *
+    **********/
+    header {
+        padding:25px 0px 15px 0px;
+        height: var(--mobile-header-height);
+    }
+
+
+    /* Logo */
+    header .logo {
+        font-size: 2.5rem;
+    }
+
+
+    /* Tabs */
+    header ul {
+        font-size: 0.7rem;
+    }
+    header ul li {
+        margin: 0 5px 10px 5px;
+        padding: 15px 15px 15px 15px;
+    }
+
+
+
+
+
+
+
+    /********
+    * HOME *
+    ********/
+    #home {
+        height: calc(100vh - var(--mobile-header-height));
+    }
+
+    /* Splash */
+    #home .splash {
+        height: calc(100vh - var(--mobile-header-height));
+        top:var(--mobile-header-height);
+    }
+    #home .splash p:nth-child(1) {
+        font-size: 1rem;
+        font-weight:500;
+    }
+    #home .splash p:nth-child(2) {
+        font-size: 1.7rem;
+        margin: 15px 0 15px 0;
+        font-weight:900;
+    }
+    #home .splash p:nth-child(3) {
+        font-size: 0.8rem;
+    }
+
+
+    /* Splash Actions */
+    #home .splash .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 35px;
+    }
+    #home .splash .actions button{
+        padding:15px;
+        width: 100%;
+    }
+}

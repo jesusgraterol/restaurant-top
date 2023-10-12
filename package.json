@@ -1,0 +1,29 @@
+{
+  "name": "restaurant_top",
+  "version": "1.0.0",
+  "description": "Restaurant Page by The Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jesusgraterol/restaurant_top.git"
+  },
+  "author": "Jesus Graterol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesusgraterol/restaurant_top/issues"
+  },
+  "homepage": "https://github.com/jesusgraterol/restaurant_top#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
