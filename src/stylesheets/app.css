@@ -182,7 +182,10 @@ header ul li.active:hover {
 /********
  * HOME *
  ********/
-#home {
+#home_container {
+    display: none;
+}
+#home_container #home {
     width: 100%;
     height: calc(100vh - var(--header-height));
     background-image: url(../assets/img/splash.jpg);
@@ -190,7 +193,7 @@ header ul li.active:hover {
 }
 
 /* Splash */
-#home .splash {
+#home_container #home .splash {
     padding:15px;
     background-color: rgba(0, 0, 0, 0.7);
     width:100%;
@@ -205,23 +208,23 @@ header ul li.active:hover {
     justify-content: center;
     color:white;
 }
-#home .splash p { text-align: center;}
-#home .splash p:nth-child(1) {
+#home_container #home .splash p { text-align: center;}
+#home_container #home .splash p:nth-child(1) {
     font-size: 2.2rem;
     font-weight:500;
 }
-#home .splash p:nth-child(2) {
+#home_container #home .splash p:nth-child(2) {
     font-size: 4rem;
     margin: 25px 0 25px 0;
     font-weight:900;
 }
-#home .splash p:nth-child(3) {
+#home_container #home .splash p:nth-child(3) {
     font-size: 1.5rem;
 }
 
 
 /* Splash Actions */
-#home .splash .actions {
+#home_container #home .splash .actions {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,23 +233,23 @@ header ul li.active:hover {
 }
 
 
-#home .splash .actions button{
+#home_container #home .splash .actions button{
     padding:20px;
     color:white;
     font-weight: bold;
     cursor: pointer;
 }
-#home .splash .actions #splash_reservation_button {
+#home_container #home .splash .actions #splash_reservation_button {
     background-color: var(--error-color);
 }
-#home .splash .actions #splash_reservation_button:hover {
+#home_container #home .splash .actions #splash_reservation_button:hover {
     background-color: #000000;
 }
-#home .splash .actions #splash_menu_button {
+#home_container #home .splash .actions #splash_menu_button {
     border: 1px solid white;
     background-color: transparent;
 }
-#home .splash .actions #splash_menu_button:hover {
+#home_container #home .splash .actions #splash_menu_button:hover {
     border: 1px solid #000000;
     background-color: #000000;
 }
@@ -261,7 +264,10 @@ header ul li.active:hover {
 /********
  * MENU *
  ********/
-#menu {
+#menu_container {
+    display: none;
+}
+#menu_container #menu {
     padding: 30px;
     display: grid;
     gap: 30px;
@@ -270,18 +276,18 @@ header ul li.active:hover {
     justify-items: center;
 }
 
-#menu .card {
+#menu_container #menu .card {
     background-color: transparent;
     position: relative;
 }
 
-#menu .card img{ 
+#menu_container #menu .card img{ 
     height:  450px;
     box-shadow: 0 9px 12px 1px rgba(0,0,0,0.14), 0 3px 16px 2px rgba(0,0,0,0.12), 0 5px 6px -3px rgba(0,0,0,0.20);
 }
 
 
-#menu .card .dish-description {
+#menu_container #menu .card .dish-description {
     position: absolute;
     bottom:4px;
     right: 0;
@@ -290,10 +296,10 @@ header ul li.active:hover {
     padding: 20px;
     opacity: 0.9;
 }
-#menu .card .dish-description h3 {
+#menu_container #menu .card .dish-description h3 {
     color: var(--error-color);
 }
-#menu .card .dish-description p {
+#menu_container #menu .card .dish-description p {
     margin-top:10px;
     font-size: 0.8rem;
 }
@@ -308,44 +314,47 @@ header ul li.active:hover {
 /***********
  * CONTACT *
  ***********/
-#contact {
+#contact_container {
+    display: none;
+}
+#contact_container #contact {
     padding:35px;
     display: flex;
     justify-content: center;
 }
 
 
-#contact .card {
+#contact_container #contact .card {
     padding: 15px;
     width: 30%;
     background-color: #FFFFFF;
     box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.20);
 }
 
-#contact .card .subtitle {
+#contact_container #contact .card .subtitle {
     margin-top: 15px;
     color: var(--light-text-color);
 }
 
 
 
-#contact .card h3 {
+#contact_container #contact .card h3 {
     margin-top: 30px;
 }
 
-#contact .card hr {
+#contact_container #contact .card hr {
     margin: 35px 0 35px 0;
     border-bottom: 1px solid #e2dfdf;
 }
 
-#contact .card .row {
+#contact_container #contact .card .row {
     margin-top: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-#contact .card .row span:first-child { margin-right: 5px; }
-#contact .card img {margin-top: 15px;}
+#contact_container #contact .card .row span:first-child { margin-right: 5px; }
+#contact_container #contact .card img {margin-top: 15px;}
 
 
 
@@ -384,7 +393,7 @@ header ul li.active:hover {
     /**********
     * CONTACT *
     ***********/
-    #contact .card {
+    #contact_container #contact .card {
         width: 50%;
     }
 }
@@ -403,7 +412,7 @@ header ul li.active:hover {
     /**********
     * CONTACT *
     ***********/
-    #contact .card {
+    #contact_container #contact .card {
         width: 60%;
     }
 }
@@ -420,7 +429,7 @@ header ul li.active:hover {
     /**********
     * CONTACT *
     ***********/
-    #contact .card {
+    #contact_container #contact .card {
         width: 70%;
     }
 }
@@ -439,7 +448,7 @@ header ul li.active:hover {
     /***********
     * CONTACT *
     ***********/
-    #contact .card {
+    #contact_container #contact .card {
         width: 85%;
     }
 }
@@ -484,37 +493,37 @@ header ul li.active:hover {
     /********
     * HOME *
     ********/
-    #home {
+    #home_container #home {
         height: calc(100vh - var(--mobile-header-height));
     }
 
     /* Splash */
-    #home .splash {
+    #home_container #home .splash {
         height: calc(100vh - var(--mobile-header-height));
         top:var(--mobile-header-height);
     }
-    #home .splash p:nth-child(1) {
+    #home_container #home .splash p:nth-child(1) {
         font-size: 1rem;
         font-weight:500;
     }
-    #home .splash p:nth-child(2) {
+    #home_container #home .splash p:nth-child(2) {
         font-size: 1.7rem;
         margin: 15px 0 15px 0;
         font-weight:900;
     }
-    #home .splash p:nth-child(3) {
+    #home_container #home .splash p:nth-child(3) {
         font-size: 0.8rem;
     }
 
 
     /* Splash Actions */
-    #home .splash .actions {
+    #home_container #home .splash .actions {
         display: flex;
         flex-direction: column;
         gap: 10px;
         margin-top: 35px;
     }
-    #home .splash .actions button{
+    #home_container #home .splash .actions button{
         padding:15px;
         width: 100%;
     }
@@ -525,12 +534,12 @@ header ul li.active:hover {
     /********
     * MENU *
     ********/
-    #menu {
+    #menu_container #menu {
         padding: 15px;
         gap: 30px;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-    #menu .card img{ 
+    #menu_container #menu .card img{ 
         max-width: 100%;
         height:  auto;
     }
@@ -548,10 +557,10 @@ header ul li.active:hover {
     /***********
     * CONTACT *
     ***********/
-    #contact {
+    #contact_container #contact {
         padding:15px;
     }
-    #contact .card {
+    #contact_container #contact .card {
         width: 100%;
         box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
     }

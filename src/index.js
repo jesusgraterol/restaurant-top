@@ -12,7 +12,8 @@ import App from "./scripts/app.js";
 // Stylesheets
 import "./stylesheets/app.css";
 
-
+// Address Image
+/* import address from "./assets/addr.png" */
 
 
 
@@ -20,4 +21,4 @@ import "./stylesheets/app.css";
  * App Initializer
  * Once all the modules have been loaded, the app is initialized.
  */
-App()
+const app = App();
