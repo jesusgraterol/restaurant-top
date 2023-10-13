@@ -184,6 +184,7 @@ header ul li.active:hover {
  ********/
 #home_container {
     display: none;
+    animation: fadein 1s;
 }
 #home_container #home {
     width: 100%;
@@ -266,6 +267,7 @@ header ul li.active:hover {
  ********/
 #menu_container {
     display: none;
+    animation: fadein 1s;
 }
 #menu_container #menu {
     padding: 30px;
@@ -316,6 +318,7 @@ header ul li.active:hover {
  ***********/
 #contact_container {
     display: none;
+    animation: fadein 1s;
 }
 #contact_container #contact {
     padding:35px;
@@ -355,6 +358,32 @@ header ul li.active:hover {
 }
 #contact_container #contact .card .row span:first-child { margin-right: 5px; }
 #contact_container #contact .card img {margin-top: 15px;}
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************
+ * PAGE TRANSITION ANIMATIONS *
+ ******************************/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+
+
+
+
 
 
 

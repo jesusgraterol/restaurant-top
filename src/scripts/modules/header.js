@@ -1,19 +1,16 @@
-
-
-
 /**
  * Header Module
- * ....
+ * The header module handles the elements located at the top of the page, including the tab navigation.
  */
 const Header = function() {
     // Create the element
-    let el = document.createElement("header");
+    let _el = document.createElement("header");
 
     // Create the logo and add it to the header
     let _logo_el = document.createElement("p");
     _logo_el.className = "logo";
     _logo_el.innerText = "SushiVille";
-    el.appendChild(_logo_el);
+    _el.appendChild(_logo_el);
 
     // Initialize the active tab
     let _active_tab = 0;
@@ -21,7 +18,7 @@ const Header = function() {
     // Initialize the tabs' container
     let _tabs_container_el = document.createElement("ul");
 
-    // Initialize the individual tab elements
+    // Initialize the individual tab elements (li)
     let _tab_els = [
         _create_tab_el(0, "HOME"),
         _create_tab_el(1, "MENU"),
@@ -31,15 +28,15 @@ const Header = function() {
     // Set the first tab as active
     _tab_els[0].classList.add("active");
 
-    // Add them to the container
+    // Add the tabs to the container (ul)
     _tab_els.forEach((tab) => _tabs_container_el.appendChild(tab));
 
     // Include the tabs container element into the header
-    el.appendChild(_tabs_container_el);
+    _el.appendChild(_tabs_container_el);
 
 
 
-    
+
 
 
 
@@ -57,21 +54,26 @@ const Header = function() {
      * @param {*} new_index 
      */
     function on_tab_changes(new_index) {
-        // Reset the active state
+        // Reset the active state for all the tabs
         _reset_active_state();
 
-        // Set the new index & the class on the new tab
-        _active_tab = new_index;
-        _tab_els[new_index].classList.add("active");
+        // Activate the new tab
+        _activate_tab(new_index);
     }
 
 
 
 
+    /**
+     * Activates the new given tab index.
+     * @param {*} new_index 
+     */
+    function _activate_tab(new_index) {
+        _active_tab = new_index;
+        _tab_els[new_index].classList.add("active");
+    }
 
 
-
-    
 
 
 
@@ -124,7 +126,34 @@ const Header = function() {
 
 
 
+
+    /**
+     * Extracts the tab index from a given value. If no index is identified, it returns undefined.
+     * @param {*} event_or_index 
+     * @returns number|undefined
+     */
+    function extract_tab_index(event_or_index) {
+        // If it is a number, return it right away
+        if (typeof event_or_index == "number") { return event_or_index }
+
+        // If it is an event object, check if it is valid and return it in number format
+        else if (
+            event_or_index && 
+            typeof event_or_index == "object" &&
+            /^[0-9]{1}$/.test(event_or_index.target.getAttribute("data-tab-index"))
+        ) {
+            return Number(event_or_index.target.getAttribute("data-tab-index"));
+        }
+
+        // Otherwise, it is invalid
+        else { return undefined }
+    }
+
+
+
     
+
+
 
 
 
@@ -133,9 +162,10 @@ const Header = function() {
      * MODULE EXPORTS *
      ******************/
     return {
-        el,
+        get el() { return _el },
         on_tab_changes,
-        is_tab_active
+        is_tab_active,
+        extract_tab_index
     }
 }
 
