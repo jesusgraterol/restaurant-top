@@ -258,6 +258,95 @@ header ul li.active:hover {
 
 
 
+/********
+ * MENU *
+ ********/
+#menu {
+    padding: 30px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: start;
+    justify-items: center;
+}
+
+#menu .card {
+    background-color: transparent;
+    position: relative;
+}
+
+#menu .card img{ 
+    height:  450px;
+    box-shadow: 0 9px 12px 1px rgba(0,0,0,0.14), 0 3px 16px 2px rgba(0,0,0,0.12), 0 5px 6px -3px rgba(0,0,0,0.20);
+}
+
+
+#menu .card .dish-description {
+    position: absolute;
+    bottom:4px;
+    right: 0;
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    opacity: 0.9;
+}
+#menu .card .dish-description h3 {
+    color: var(--error-color);
+}
+#menu .card .dish-description p {
+    margin-top:10px;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
+/***********
+ * CONTACT *
+ ***********/
+#contact {
+    padding:35px;
+    display: flex;
+    justify-content: center;
+}
+
+
+#contact .card {
+    padding: 15px;
+    width: 30%;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.20);
+}
+
+#contact .card .subtitle {
+    margin-top: 15px;
+    color: var(--light-text-color);
+}
+
+
+
+#contact .card h3 {
+    margin-top: 30px;
+}
+
+#contact .card hr {
+    margin: 35px 0 35px 0;
+    border-bottom: 1px solid #e2dfdf;
+}
+
+#contact .card .row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#contact .card .row span:first-child { margin-right: 5px; }
+#contact .card img {margin-top: 15px;}
+
 
 
 
@@ -292,7 +381,12 @@ header ul li.active:hover {
 @media (min-width: 1025px) and (max-width: 1280px) {
 
 
-
+    /**********
+    * CONTACT *
+    ***********/
+    #contact .card {
+        width: 50%;
+    }
 }
  
  
@@ -303,6 +397,15 @@ header ul li.active:hover {
 @media (min-width: 768px) and (max-width: 1024px) {
 
 
+
+
+
+    /**********
+    * CONTACT *
+    ***********/
+    #contact .card {
+        width: 60%;
+    }
 }
  
  
@@ -313,6 +416,13 @@ header ul li.active:hover {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
 
+
+    /**********
+    * CONTACT *
+    ***********/
+    #contact .card {
+        width: 70%;
+    }
 }
  
  
@@ -323,6 +433,15 @@ header ul li.active:hover {
 @media (min-width: 481px) and (max-width: 767px) {
 
 
+
+
+
+    /***********
+    * CONTACT *
+    ***********/
+    #contact .card {
+        width: 85%;
+    }
 }
 
  
@@ -398,5 +517,42 @@ header ul li.active:hover {
     #home .splash .actions button{
         padding:15px;
         width: 100%;
+    }
+
+
+
+
+    /********
+    * MENU *
+    ********/
+    #menu {
+        padding: 15px;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    #menu .card img{ 
+        max-width: 100%;
+        height:  auto;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+    /***********
+    * CONTACT *
+    ***********/
+    #contact {
+        padding:15px;
+    }
+    #contact .card {
+        width: 100%;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
     }
 }

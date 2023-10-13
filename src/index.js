@@ -5,12 +5,12 @@
  */
 
 
-// Stylesheets
-import "./stylesheets/app.css";
-
 // Scripts
 import App from "./scripts/app.js";
 
+
+// Stylesheets
+import "./stylesheets/app.css";
 
 
 
